@@ -22,41 +22,28 @@
       gesture-detector
       id="scene"
     >
-    
       <a-assets>
-          <a-video id="myGif" loop autoplay>
-              <source src="animation.mp4" type="video/mp4">
-          </video>
+        <video id="my-video" src="path/to/your/video.mp4" autoplay loop crossorigin="anonymous"></video>
       </a-assets>
-        
+
       <a-marker
-          type="pattern"
-          url="pattern-kirieshka.patt"
-          raycaster="objects: .clickable"
-          emitevents="true"
-          cursor="fuse: false; rayOrigin: mouse;"
-          id="markerA"
+        type="pattern"
+        url="pattern-kirieshka.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
       >
-          <a-video
-              src="#myGif"
-              position="0 0 0"
-              scale="1 1 1"
-              rotation="-90 0 0"
-              class="clickable"
-              gesture-handler
-          ></a-video>
-      </a-marker>
-        
-        <a-entity
-          id="bowser-model"
-          gltf-model="#bowser"
-          position="0 0 0"
-          scale="1 1 1"
+        <a-video
+          src="#my-video"
+          width="1"
+          height="1"
+          rotation="-90 0 0" <!-- Поворот для правильного отображения -->
           class="clickable"
           gesture-handler
-        >
-        </a-entity>
+        ></a-video>
       </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
