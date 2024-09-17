@@ -23,7 +23,7 @@
       id="scene"
     >
       <a-assets>
-        <video id="my-video" src="animation.mp4" autoplay loop crossorigin="anonymous"></video>
+        <video id="bowser" src="animation.mp4" autoplay loop crossorigin="anonymous"></video>
       </a-assets>
 
       <a-marker
@@ -35,10 +35,11 @@
         id="markerA"
       >
         <a-video
-          src="#my-video"
+          id="bowser-model"
+          src="#bowser"
           width="1"
           height="1"
-          rotation="-90 0 0" <!-- Поворот для правильного отображения -->
+          rotation="-90 0 0"
           class="clickable"
           gesture-handler
         ></a-video>
