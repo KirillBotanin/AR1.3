@@ -24,25 +24,27 @@
     >
     
       <a-assets>
-        <img id="myImage" src="img.jpg" alt="My Image">
+          <video id="myGif" loop autoplay>
+              <source src="gifka.gif" type="video/mp4">
+          </video>
       </a-assets>
-    
+        
       <a-marker
-        type="pattern"
-        url="pattern-kirieshka.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
+          type="pattern"
+          url="pattern-kirieshka.patt"
+          raycaster="objects: .clickable"
+          emitevents="true"
+          cursor="fuse: false; rayOrigin: mouse;"
+          id="markerA"
       >
-        <a-image
-            src="#myImage"
-            position="0 0 0"
-            rotation="-90 0 0"
-            scale="1 1 1"
-            class="clickable"
-            gesture-handler
-        ></a-image>
+          <a-video
+              src="#myGif"
+              position="0 0 0"
+              scale="1 1 1"
+              rotation="0 90 0"
+              class="clickable"
+              gesture-handler
+          ></a-video>
       </a-marker>
         
         <a-entity
